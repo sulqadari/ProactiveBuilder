@@ -22,24 +22,24 @@
                            <font>
                               <Font name="Beeline Sans Medium" size="14.0" />
                            </font></Button>
-                        <TextArea fx:id="dispText_textString_textArea" layoutX="14.0" layoutY="53.0" prefHeight="200.0" prefWidth="309.0" text="Test Messge" wrapText="true">
+                        <TextArea fx:id="dispText_textString_textArea" layoutX="71.0" layoutY="53.0" prefHeight="200.0" prefWidth="309.0" text="Test Messge" wrapText="true">
                            <font>
                               <Font name="Monospaced Regular" size="14.0" />
                            </font>
                         </TextArea>
-                        <TextArea fx:id="dispText_textAttribute_textArea" layoutX="337.0" layoutY="53.0" prefHeight="200.0" prefWidth="309.0" promptText="0000F900" wrapText="true">
+                        <TextArea fx:id="dispText_textAttribute_textArea" layoutX="394.0" layoutY="53.0" prefHeight="200.0" prefWidth="309.0" promptText="0000F900" wrapText="true">
                            <font>
                               <Font name="Monospaced Regular" size="14.0" />
                            </font>
                         </TextArea>
-                        <TextField fx:id="dispText_iconID_textField" layoutX="657.0" layoutY="53.0" prefHeight="25.0" prefWidth="43.0" promptText="01 01" />
-                        <CheckBox fx:id="dispText_immediateResp_checkBox" layoutX="657.0" layoutY="164.0" mnemonicParsing="false" text="Immediate response">
+                        <TextField fx:id="dispText_iconID_textField" layoutX="708.0" layoutY="55.0" prefHeight="25.0" prefWidth="43.0" promptText="01 01" />
+                        <CheckBox fx:id="dispText_immediateResp_checkBox" layoutX="708.0" layoutY="166.0" mnemonicParsing="false" text="Immediate response">
                            <font>
                               <Font name="Beeline Sans Medium" size="18.0" />
                            </font>
                         </CheckBox>
-                        <TextField fx:id="dispText_duration_textField" layoutX="657.0" layoutY="89.0" prefHeight="25.0" prefWidth="43.0" promptText="01 0F" />
-                        <TextField fx:id="dispText_frameID_textField" layoutX="657.0" layoutY="127.0" prefHeight="25.0" prefWidth="29.0" promptText="00" />
+                        <TextField fx:id="dispText_duration_textField" layoutX="708.0" layoutY="91.0" prefHeight="25.0" prefWidth="43.0" promptText="01 0F" />
+                        <TextField fx:id="dispText_frameID_textField" layoutX="708.0" layoutY="129.0" prefHeight="25.0" prefWidth="29.0" promptText="00" />
                         <Label layoutX="125.0" layoutY="14.0" prefHeight="30.0" prefWidth="88.0" text="Text String">
                            <font>
                               <Font name="Beeline Sans Medium" size="18.0" />
@@ -50,27 +50,33 @@
                               <Font name="Beeline Sans Medium" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="715.0" layoutY="51.0" prefHeight="30.0" prefWidth="57.0" text="Icon ID">
+                        <Label layoutX="766.0" layoutY="53.0" prefHeight="30.0" prefWidth="57.0" text="Icon ID">
                            <font>
                               <Font name="Beeline Sans Medium" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="715.0" layoutY="87.0" prefHeight="30.0" prefWidth="70.0" text="Duration">
+                        <Label layoutX="766.0" layoutY="89.0" prefHeight="30.0" prefWidth="70.0" text="Duration">
                            <font>
                               <Font name="Beeline Sans Medium" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="715.0" layoutY="124.0" prefHeight="30.0" prefWidth="70.0" text="Frame ID">
+                        <Label layoutX="766.0" layoutY="126.0" prefHeight="30.0" prefWidth="70.0" text="Frame ID">
                            <font>
                               <Font name="Beeline Sans Medium" size="18.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="dispText_tlv_textArea" layoutX="15.0" layoutY="310.0" prefHeight="341.0" prefWidth="633.0" wrapText="true">
+                        <TextArea fx:id="dispText_tlv_textArea" layoutX="71.0" layoutY="311.0" prefHeight="341.0" prefWidth="633.0" wrapText="true">
                            <font>
                               <Font name="Monospaced Regular" size="14.0" />
                            </font>
                         </TextArea>
-                        <Label layoutX="316.0" layoutY="263.0" prefHeight="30.0" prefWidth="30.0" text="TLV">
+                        <Label layoutX="373.0" layoutY="263.0" prefHeight="30.0" prefWidth="30.0" text="TLV">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dispText_dcs_textField" layoutX="34.0" layoutY="53.0" prefHeight="25.0" prefWidth="29.0" text="08" />
+                        <Label layoutX="36.0" layoutY="14.0" prefHeight="30.0" prefWidth="70.0" text="DCS">
                            <font>
                               <Font name="Beeline Sans Medium" size="18.0" />
                            </font>
@@ -177,6 +183,124 @@
                               <Font name="Monospaced Regular" size="14.0" />
                            </font>
                         </TextArea>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Get input">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="getInput_tlv_textArea" layoutX="15.0" layoutY="310.0" prefHeight="341.0" prefWidth="633.0" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Regular" size="14.0" />
+                           </font>
+                        </TextArea>
+                        <Button fx:id="getInput_build_button" layoutX="899.0" layoutY="626.0" mnemonicParsing="false" onAction="#getInputBuildTlv" prefHeight="25.0" prefWidth="98.0" text="Build">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="getInput_qualifier_textFiled" layoutX="666.0" layoutY="35.0" prefHeight="25.0" prefWidth="35.0" text="00">
+                           <font>
+                              <Font name="Monospaced Regular" size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="666.0" layoutY="9.0" prefHeight="27.0" prefWidth="54.0" text="Qualifier">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="getInput_dcs_textFiled" layoutX="11.0" layoutY="96.0" prefHeight="26.0" prefWidth="35.0" text="08">
+                           <font>
+                              <Font name="Monospaced Regular" size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="11.0" layoutY="69.0" prefHeight="27.0" prefWidth="33.0" text="DCS">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="getInput_iconID_textFiled" layoutX="730.0" layoutY="35.0" prefHeight="25.0" prefWidth="62.0" promptText="01 01">
+                           <font>
+                              <Font name="Monospaced Regular" size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="730.0" layoutY="9.0" prefHeight="27.0" prefWidth="89.0" text="Icon identifier">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="getInput_frameID_textFiled" layoutX="824.0" layoutY="35.0" prefColumnCount="2" prefHeight="25.0" prefWidth="35.0" promptText="00">
+                           <font>
+                              <Font name="Monospaced Regular" size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="824.0" layoutY="9.0" prefHeight="27.0" prefWidth="98.0" text="Frame identifier">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="54.0" layoutY="69.0" prefHeight="27.0" prefWidth="70.0" text="Text string">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="getInput_textString_textArea" layoutX="55.0" layoutY="96.0" prefHeight="150.0" prefWidth="230.0" text="Введите ПИН:" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Regular" size="14.0" />
+                           </font>
+                        </TextArea>
+                        <TextField fx:id="getInput_respLen_textField" layoutX="11.0" layoutY="35.0" prefColumnCount="2" prefHeight="25.0" prefWidth="62.0" text="04 08">
+                           <font>
+                              <Font name="Monospaced Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="11.0" layoutY="9.0" prefHeight="27.0" prefWidth="107.0" text="Response Length">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="357.0" layoutY="68.0" prefHeight="27.0" prefWidth="165.0" text="Default Text">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="664.0" layoutY="68.0" prefHeight="20.0" prefWidth="85.0" text="Text attribute">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="getInput_textAttribute_textArea" layoutX="664.0" layoutY="96.0" prefHeight="150.0" prefWidth="160.0" promptText="00 02 10 00     ...             03 02 40 00" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Regular" size="14.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea fx:id="getInput_defaultText_textArea" layoutX="357.0" layoutY="96.0" prefHeight="150.0" prefWidth="230.0" text="Enter PIN:" wrapText="true">
+                           <font>
+                              <Font name="Monospaced Regular" size="14.0" />
+                           </font>
+                        </TextArea>
+                        <TextField fx:id="getInput_defTxtDcs_textFiled" layoutX="314.0" layoutY="96.0" prefHeight="26.0" prefWidth="35.0" text="04">
+                           <font>
+                              <Font name="Monospaced Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="316.0" layoutY="68.0" prefHeight="27.0" prefWidth="33.0" text="DCS">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="319.0" layoutY="277.0" prefHeight="27.0" prefWidth="27.0" text="TLV">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="getInput_duration_textFiled" layoutX="124.0" layoutY="35.0" prefHeight="25.0" prefWidth="62.0" promptText="01 0A">
+                           <font>
+                              <Font name="Monospaced Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="124.0" layoutY="9.0" prefHeight="27.0" prefWidth="107.0" text="Duration">
+                           <font>
+                              <Font name="Beeline Sans Medium" size="14.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
           </Tab>

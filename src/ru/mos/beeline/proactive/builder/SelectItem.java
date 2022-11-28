@@ -4,11 +4,11 @@ import java.nio.charset.StandardCharsets;
 
 public class SelectItem
 {
-    String commandDetails = "810324";
+    String commandDetails = "";
     
     public void setQualifier(String quialifier)
     {
-        commandDetails += quialifier + "82";
+        commandDetails = "810324" + quialifier + "82";
     }
 
     public void setAlphaId(String alpha)
@@ -130,10 +130,5 @@ public class SelectItem
     {
         commandDetails = "8B" + String.format("%02X", commandDetails.length() / 2) + commandDetails;
         return commandDetails;
-    }
-
-    public void clear()
-    {
-        commandDetails = "810324";
     }
 }

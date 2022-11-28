@@ -6,11 +6,16 @@ public class DisplayText extends ProactiveCommand
 {
     String commandDetails = "";
 
-    public void setTextString(String textString)
+    public void setTextString(String textString, String dcs)
     {
+        byte[] bytes;
         commandDetails = "8103218102";
-        byte[] bytes = textString.getBytes(StandardCharsets.UTF_16BE);
-        textString = "8D" + String.format("%02X", (bytes.length + 1)) + "08" + Utils.hexify(bytes);
+        if (dcs.equalsIgnoreCase("08"))
+            bytes = textString.getBytes(StandardCharsets.UTF_16BE);
+        else
+            bytes = textString.getBytes(StandardCharsets.US_ASCII);
+        
+        textString = "8D" + String.format("%02X", (bytes.length + 1)) + dcs + Utils.hexify(bytes);
         commandDetails += textString;
     }
 
